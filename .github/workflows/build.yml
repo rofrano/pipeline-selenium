@@ -31,6 +31,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: |
-            rofrano/pipeline-selenium:test
-            # rofrano/pipeline-selenium:${{ github.event.release.tag_name }}
+          tags: rofrano/pipeline-selenium:test
