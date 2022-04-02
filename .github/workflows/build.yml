@@ -3,12 +3,9 @@ name: Docker Build
 on:
   release:
     types: [created]
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
 
 jobs:
   docker:
@@ -31,4 +28,6 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: rofrano/pipeline-selenium:test
+          tags: |
+            rofrano/pipeline-selenium:latest
+            rofrano/pipeline-selenium:${{ github.event.release.tag_name }}
