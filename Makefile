@@ -16,7 +16,7 @@ PLATFORM ?= "linux/amd64,linux/arm64"
 
 DOCKER_BUILDKIT = 1
 
-all: build
+all: init build
 
 ## help:	Lists help on the commands
 .PHONY: help
@@ -32,7 +32,8 @@ clean:	## Removes all dangling build cache
 init: export DOCKER_BUILDKIT=1
 init:	## Creates the buildx instance
 	$(info Initializing Builder...)
-	docker buildx create --use --name=qemu
+	-docker buildx create qemu
+	docker buildx use qemu
 	docker buildx inspect --bootstrap
 
 .PHONY: build

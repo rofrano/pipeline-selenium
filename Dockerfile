@@ -1,11 +1,8 @@
 # Docker image for Python Behavior Driven Development Pipeline
-FROM python:3.9-slim
+FROM rofrano/nyu-devops-base:sp23
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    wget \
-    chromium-driver \
-    python3-selenium
+RUN sudo apt-get update && \
+    sudo apt-get install -y chromium-driver python3-selenium
 
 WORKDIR /app
 
