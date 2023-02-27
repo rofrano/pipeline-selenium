@@ -1,7 +1,7 @@
 ## ----------------------------------------------------------------------
-## Builder for creating Docker images that behave similar to Virtual
-## Machines for use with Vagrant. This takes advantage if the buildx
-## builder in docker which can cross-compile images for other targets.
+## Builder for creating Docker images on multiple platform architectures.
+## This takes advantage if the buildx builder in docker which can
+## cross-compile images for other targets.
 ## ----------------------------------------------------------------------
 
 # These can be overidden with env vars.
@@ -42,9 +42,9 @@ build:	## Build all of the project Docker images
 	docker buildx build --pull --platform=$(PLATFORM) --tag $(IMAGE) --push .
 
 .PHONY: run
-run:	## Run a vagrant VM using this image
+run:	## Run a container using this image
 	$(info Bringing up container with Docker...)
-	docker run --rm -v $(PWD)/app -w /app $(IMAGE) bash
+	docker run --rm -it -h nyu --user vscode -v $(PWD):/app -w /app $(IMAGE) bash
 
 .PHONY: remove
 remove:	## Stop and remove the buildx builder
