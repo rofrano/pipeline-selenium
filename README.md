@@ -37,14 +37,14 @@ Your test job should look something like this:
 To run locally use:
 
 ```sh
-docker run --rm -it -v $(pwd):/app -w /app rofrano/pipeline-selenium bash
+docker run --rm -it -h nyu --user vscode -v $(pwd):/app -w /app rofrano/pipeline-selenium bash
 ```
 
-That will leave you at a `bash` prompt in the `/app` folder shared with your current working directory so that you can `pip install` your dependencies and start your testing.
+That will place you inside the container as the user `vscode` sitting at a `bash` prompt in the `/app` folder that has been shared with your current working directory so that you can `pip install` your dependencies and start your testing.
 
 ## License
 
-Copyright (c) 2022, John Rofrano. All rights reserved.
+Copyright (c) 2022, 2023 John Rofrano. All rights reserved.
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
 
