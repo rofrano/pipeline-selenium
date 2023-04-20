@@ -3,11 +3,11 @@
 [![Build Status](https://github.com/rofrano/pipeline-selenium/actions/workflows/build.yml/badge.svg)](https://github.com/rofrano/pipeline-selenium/actions)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-The repository creates a Docker image with Selenium and Chrome for use in a Python Behavior Driven Development.
+This Docker image is for Python Behavior Driven Development with Selenium, Chrome, and Firefox pre-installed.
 
 ## Description
 
-This Docker image is based on the Python 3.9-Slim Debian 11 and contains Python 3 with Selenium and the ChromeDriver to perform BDD testing with Behave.
+This Docker image is based on the Python 3.9-Slim Debian 11 and contains Python 3 with Selenium and both the ChromeDriver and GeckoDriver to perform BDD testing with Behave with either headless Chrome or Firefox.
 
 ## Usage
 
