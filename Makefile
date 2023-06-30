@@ -16,7 +16,7 @@ PLATFORM ?= "linux/amd64,linux/arm64"
 
 DOCKER_BUILDKIT = 1
 
-all: init build
+all: help
 
 ## help:	Lists help on the commands
 .PHONY: help

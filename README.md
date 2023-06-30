@@ -7,7 +7,7 @@ This Docker image is for Python Behavior Driven Development with Selenium, Chrom
 
 ## Description
 
-This Docker image is based on the Python 3.9-Slim Debian 11 and contains Python 3 with Selenium and both the ChromeDriver and GeckoDriver to perform BDD testing with Behave with either headless Chrome or Firefox.
+This Docker image is based on the Python 3.11-Slim Debian 11 and contains Python 3 with Selenium and both the ChromeDriver and GeckoDriver to perform BDD testing with Behave with either headless Chrome or Firefox.
 
 ## Usage
 
