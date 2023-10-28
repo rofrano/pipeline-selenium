@@ -1,7 +1,7 @@
 # Docker image for Python Behavior Driven Development Pipeline
 FROM rofrano/nyu-devops-base:fa23
 
-# This build image needs to be root
+# This build image needs to be root to work in IBM Cloud CI/CD
 USER root
 
 # Install Selenium, Chrome and Firefox
