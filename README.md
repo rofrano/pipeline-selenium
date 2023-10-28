@@ -7,7 +7,7 @@ The repository creates a Docker image with Selenium and Chrome for use in a Pyth
 
 ## Description
 
-This Docker image is based on the Python 3.9-Slim Debian 11 and contains Python 3 with Selenium and the ChromeDriver to perform BDD testing with Behave.
+This Docker image is based on the Python 3.11-Slim Debian 11 and contains Python 3 with Selenium and the ChromeDriver to perform BDD testing with Behave.
 
 ## Usage
 
