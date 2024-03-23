@@ -1,5 +1,5 @@
 # Docker image for Python Behavior Driven Development Pipeline
-FROM rofrano/nyu-devops-base:fa23
+FROM rofrano/nyu-devops-base:sp24
 
 # This build image needs to be root to work in IBM Cloud CI/CD
 USER root
