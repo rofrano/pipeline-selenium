@@ -28,3 +28,18 @@ jobs:
           tags: |
             rofrano/pipeline-selenium:latest
             rofrano/pipeline-selenium:${{ github.event.release.tag_name }}
+
+      - name: Quay.io Login
+        uses: docker/login-action@v3.0.0
+        with:
+          username: ${{ secrets.QUAYIO_USERNAME }}
+          password: ${{ secrets.QUAYIO_TOKEN }}
+
+      - name: Build and push Quay.io images
+        uses: docker/build-push-action@v5.0.0
+        with:
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            quay.io/rofrano/pipeline-selenium:latest
+            quay.io/rofrano/pipeline-selenium:${{ github.event.release.tag_name }}
