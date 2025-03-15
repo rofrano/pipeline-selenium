@@ -20,7 +20,7 @@ Create a Stage with a Test Job and select **Custom Docker Image** as the *Tester
 ```bash
 #!/bin/bash
 #Invoke tests here
-pip install -qr requirements.txt
+pipenv install --system --dev
 echo "**************************************************"
 echo "       R U N N I N G   T H E   T E S T S "
 echo "**************************************************"
@@ -40,12 +40,12 @@ To run locally use:
 docker run --rm -it -h nyu --user vscode -v $(pwd):/app -w /app rofrano/pipeline-selenium bash
 ```
 
-That will place you inside the container as the user `vscode` sitting at a `bash` prompt in the `/app` folder that has been shared with your current working directory so that you can `pip install` your dependencies and start your testing.
+That will place you inside the container as the user `vscode` sitting at a `bash` prompt in the `/app` folder that has been shared with your current working directory so that you can `pipenv install` your dependencies and start your testing.
 
 ## License
 
-Copyright (c) 2022, 2023 John Rofrano. All rights reserved.
+Copyright (c) 2022, 2025 John Rofrano. All rights reserved.
 
 Licensed under the Apache License. See [LICENSE](LICENSE)
 
-This repo is part of the NYU masters class: **CSCI-GA.2820-001 DevOps and Agile Methodologies** created by *John Rofrano*
+This repository is part of the NYU graduate class **CSCI-GA.2810-001: DevOps and Agile Methodologies** taught by [John Rofrano](http://cs.nyu.edu/~rofrano/), Adjunct Instructor, NYU Courant Institute, Graduate Division, Computer Science.
